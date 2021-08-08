@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+import Mapbox from "../components/Mapbox";
 function Search({ searchResults }) {
   const router = useRouter();
   // ES6 Destructuring
@@ -56,6 +57,9 @@ function Search({ searchResults }) {
               )
             )}
           </div>
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Mapbox searchResults={searchResults} />
         </section>
       </main>
       <Footer />
